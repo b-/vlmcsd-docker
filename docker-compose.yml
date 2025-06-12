@@ -326,7 +326,7 @@ services:
 
 
         EXPOSE 1688/tcp
-        CMD [ "/usr/bin/vlmcsd", "-D", "-d", "-j", "/vlmcsd.kmd", "-e" ]
+        ENTRYPOINT [ "/usr/bin/vlmcsd", "-D", "-d", "-j", "/vlmcsd.kmd", "-e" ]
     ports:
       - "1688:1688"
     restart: always

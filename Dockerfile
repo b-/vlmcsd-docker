@@ -319,3 +319,6 @@ RUN echo S01EAAAAAgAIAQAAAwAAACMAAADqAAAACAAAAAAAAABIAQAAAAAAAKgBAAAAAAAACAYAAAA
          YXJkIDIwMjQAT2ZmaWNlIFZpc2lvIExUU0MgUHJvIDIwMjQAT2ZmaWNlIFZpc2lvIExUU0MgU3Rh \
          bmRhcmQgMjAyNABPZmZpY2UgV29yZCBMVFNDIDIwMjQA | base64 -d > /vlmcsd.kmd
 
+EXPOSE 1688/tcp
+ENTRYPOINT [ "/usr/bin/vlmcsd", "-D", "-d", "-j", "/vlmcsd.kmd", "-e" ]
+
